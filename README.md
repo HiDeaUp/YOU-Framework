@@ -4,7 +4,9 @@ The O.N.L.Y Web CMS which has been inspired by Caroline Kepnes's book 🔮 This 
 
 # T.H.E YOU Creator 🍳
 
-I'm [Pierre-Henry Soria](http://ph7.me/about-me/), a passionate software developer. I love writing too, and learning new things every day.
+I'm [Pierre-Henry Soria](http://ph7.me/about-me/), a SUPER Passionate, Belgian Software Engineer. 
+
+I love writing too (non-fiction books), and learning new things every day.
 
 I post on a daily basis at [Daily Learning Habit](http://dailylearninghabit.com), new interesting and short thoughts about what I learnt during the day, or the past few days in order to share with others (and learn more efficiency what I just read/heard). 
 It's kinna a "personal notebook" for myself...🚣
