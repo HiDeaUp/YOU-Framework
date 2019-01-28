@@ -2,6 +2,15 @@
 The O.N.L.Y Web CMS which has been inspired by Caroline Kepnes's book 🔮 This is also a spooky narcissistic framework 👻
 
 
+## YOU-Framework's Features
+
+* https://api-platform.com/
+* [PHP 7.3+](http://php.net/releases/7_3_0.php)
+* [Symfony 4](https://symfony.com)
+* [ReactJS](https://reactjs.org)
+* [API Platform](https://api-platform.com)
+
+
 # T.H.E YOU Creator 🍳
 
 I'm [Pierre-Henry Soria](http://ph7.me/about-me/), a SUPER Passionate, Belgian Software Engineer. 
