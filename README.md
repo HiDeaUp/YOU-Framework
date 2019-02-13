@@ -1,5 +1,5 @@
 # "YOU" Framework
-The O.N.L.Y Web CMS, which has been inspired by Caroline Kepnes's book 🔮 This is also a spooky narcissistic framework, like [the Spooky one](https://github.com/pH-7/Spooky) I did back in 2014
+The O.N.L.Y Web CMS, which has been inspired by Caroline Kepnes's book 🔮 This is also a spooky narcissistic framework, like [the Spooky one](https://github.com/pH-7/Spooky) I did back in 2014.
 
 
 ## YOU-Framework's Features
