@@ -6,6 +6,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -34,11 +35,14 @@ class BlogController extends AbstractController
     /**
      * @Route("/list/{page}", name="blog_list", requirements={"id"="\d+"}, defaults={"page": 1})
      */
-    public function list($page)
+    public function list($page, Request $request)
     {
+        $limit = $request->get('limit', 10);
+
         return new JsonResponse(
             [
                 'page' => $page,
+                'limit' => $limit,
                 'data' => array_map(
                     function ($item) {
                         return $this->generateUrl('blog_post', ['id' => $item['id']]);
