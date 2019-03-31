@@ -5,9 +5,9 @@ The O.N.L.Y Web CMS, which has been inspired by Caroline Kepnes's book 🔮 This
 ## YOU-Framework's Features
 
 * [PHP 7.3+](http://php.net/releases/7_3_0.php)
-* [Symfony 4](https://symfony.com)
-* [ReactJS](https://reactjs.org)
+* [Symfony 4.2](https://symfony.com)
 * [API Platform](https://api-platform.com)
+* [ReactJS](https://reactjs.org)
 
 
 # T.H.E YOU Creator 🍳
