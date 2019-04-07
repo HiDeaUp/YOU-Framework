@@ -12,7 +12,7 @@ The O.N.L.Y Web CMS, which has been inspired by Caroline Kepnes's book 🔮 This
 
 # T.H.E YOU Creator 🍳
 
-[![Pierre-Henry Soria](https://avatars0.githubusercontent.com/u/1325411?s=200)](http://pierrehenry.be "My personal website :-)")
+[![Pierre-Henry Soria](https://avatars0.githubusercontent.com/u/1325411?s=200)](https://pierrehenry.be "My personal website :-)")
 
 Hi You! 👋
 I'm [Pierre-Henry Soria](http://ph7.me/about-me/). A SUPER Passionate Belgian Software Engineer.
