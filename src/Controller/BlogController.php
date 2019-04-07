@@ -35,7 +35,7 @@ class BlogController extends AbstractController
     /**
      * @Route("/list/{page}", name="blog_list", requirements={"id"="\d+"}, defaults={"page": 1})
      */
-    public function list($page, Request $request)
+    public function list($page, Request $request): JsonResponse
     {
         $limit = $request->get('limit', 10);
 
@@ -55,8 +55,7 @@ class BlogController extends AbstractController
     /**
      * @Route("/{id}", name="blog_post", requirements={"id"="\d+"})
      */
-    public
-    function post($id)
+    public function post($id): JsonResponse
     {
         return new JsonResponse(
             self::POSTS[array_search($id, array_column(self::POSTS, 'id'))]
@@ -66,8 +65,7 @@ class BlogController extends AbstractController
     /**
      * @Route("/{slug}", name="blog_slug")
      */
-    public
-    function postBySlug($slug)
+    public function postBySlug($slug): JsonResponse
     {
         return new JsonResponse(
             self::POSTS[array_search($slug, array_column(self::POSTS, 'slug'))]
