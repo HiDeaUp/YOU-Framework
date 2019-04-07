@@ -33,7 +33,7 @@ class BlogController extends AbstractController
     ];
 
     /**
-     * @Route("/list/{page}", name="blog_list", requirements={"id"="\d+"}, defaults={"page": 1})
+     * @Route("/list/{page}", name="blog_list", requirements={"page"="\d+"}, defaults={"page": 1})
      */
     public function list($page, Request $request): JsonResponse
     {
