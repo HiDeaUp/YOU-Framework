@@ -18,7 +18,7 @@ use Symfony\Component\Serializer\Serializer;
 class BlogController extends AbstractController
 {
     /**
-     * @Route("/list/{page}", name="blog_list", requirements={"page"="\d+"}, defaults={"page": 1})
+     * @Route("/list/{page}", name="blog_list", requirements={"page"="\d+"}, defaults={"page": 1}, methods={"GET"})
      */
     public function list($page, Request $request): JsonResponse
     {
@@ -39,7 +39,7 @@ class BlogController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="blog_post", requirements={"id"="\d+"})
+     * @Route("/{id}", name="blog_post", requirements={"id"="\d+"}, methods={"GET"})
      * @ParamConverter("post", class="App:BlogPost")
      */
     public function post(BlogPost $post): JsonResponse
@@ -48,8 +48,8 @@ class BlogController extends AbstractController
     }
 
     /**
-     * @Route("/{slug}", name="blog_slug")
-     * @ParamConverter("post", class="App:BlogPost", options={"mapping": {"slug": "author"}})
+     * @Route("/{slug}", name="blog_slug", methods={"GET"})
+     * @ParamConverter("post", class="App:BlogPost", options={"mapping": {"slug": "slug"}})
      */
     public function postBySlug(BlogPost $post): JsonResponse
     {
