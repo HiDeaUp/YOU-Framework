@@ -13,6 +13,7 @@
         "symfony/orm-pack": "^1.0",
         "symfony/property-info": "4.2.*",
         "symfony/serializer": "4.2.*",
+        "symfony/serializer-pack": "^1.0",
         "symfony/yaml": "4.2.*"
     },
     "config": {
