@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Entity\BlogPost;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -16,39 +17,22 @@ use Symfony\Component\Serializer\Serializer;
  */
 class BlogController extends AbstractController
 {
-    private const POSTS = [
-        [
-            'id' => 1,
-            'slug' => 'hello-world',
-            'title' => 'Hello World'
-        ],
-        [
-            'id' => 2,
-            'slug' => 'another-post',
-            'title' => 'Second Example'
-        ],
-        [
-            'id' => 3,
-            'slug' => 'last-example',
-            'title' => 'This is the last  one'
-        ]
-    ];
-
     /**
      * @Route("/list/{page}", name="blog_list", requirements={"page"="\d+"}, defaults={"page": 1})
      */
     public function list($page, Request $request): JsonResponse
     {
         $limit = $request->get('limit', 10);
+        $items = $this->getDoctrine()->getRepository(BlogPost::class)->findAll();
 
         return new JsonResponse(
             [
                 'page' => $page,
                 'limit' => $limit,
                 'data' => array_map(
-                    function ($item) {
-                        return $this->generateUrl('blog_post', ['id' => $item['id']]);
-                    }, self::POSTS
+                    function (BlogPost $item) {
+                        return $this->generateUrl('blog_slug', ['slug' => $item->getSlug()]);
+                    }, $items
                 )
             ]
         );
@@ -56,22 +40,20 @@ class BlogController extends AbstractController
 
     /**
      * @Route("/{id}", name="blog_post", requirements={"id"="\d+"})
+     * @ParamConverter("post", class="App:BlogPost")
      */
-    public function post($id): JsonResponse
+    public function post(BlogPost $post): JsonResponse
     {
-        return new JsonResponse(
-            self::POSTS[array_search($id, array_column(self::POSTS, 'id'))]
-        );
+        return $this->json($post);
     }
 
     /**
      * @Route("/{slug}", name="blog_slug")
+     * @ParamConverter("post", class="App:BlogPost", options={"mapping": {"slug": "author"}})
      */
-    public function postBySlug($slug): JsonResponse
+    public function postBySlug(BlogPost $post): JsonResponse
     {
-        return new JsonResponse(
-            self::POSTS[array_search($slug, array_column(self::POSTS, 'slug'))]
-        );
+        return $this->json($post);
     }
 
     /**
@@ -88,6 +70,6 @@ class BlogController extends AbstractController
         $em->persist($blogPost);
         $em->flush();
 
-        return $this->json();
+        return $this->json($blogPost);
     }
 }
