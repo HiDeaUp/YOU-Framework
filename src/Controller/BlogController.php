@@ -77,7 +77,7 @@ class BlogController extends AbstractController
     /**
      * @Route("/post/{id}", name="blog_remove", methods={"DELETE"})
      */
-    public function delete(BlogPost $post)
+    public function delete(BlogPost $post): JsonResponse
     {
         $em = $this->getDoctrine()->getManager();
         $em->remove($post);
