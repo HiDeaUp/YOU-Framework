@@ -19,7 +19,7 @@ I'm [Pierre-Henry Soria](https://ph7.me). A SUPER Passionate Belgian Software En
 
 I love writing and reading too (non-fiction books), and learning new things every day.
 
-I post on a daily basis at [Daily Learning Habit™](https://dailylearninghabit.wordpress.com/), new interesting and short thoughts about what I learnt during the day or the past few days, in order to share with others (and learn more efficiency what I just read/heard).
+I post on a daily basis at [Daily Learning Habit™](https://dailylearninghabit.wordpress.com), new interesting and short thoughts about what I learnt during the day or the past few days, in order to share with others (and learn more efficiency what I just read/heard).
 It's kinna "personal notebook" for myself...🚣
 
 Finally, I'm also the founder of [pH7's Social Dating Builder](https://github.com/pH7Software/pH7-Social-Dating-CMS) and hundreds of open source projects too 😊 (a  few are available [here](https://github.com/pH-7?tab=repositories) on my GitHub profile).
